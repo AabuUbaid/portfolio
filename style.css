@@ -406,9 +406,9 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
 
-    #header {
+    /* #header {
         background-image: url(images/Remove\ background\ project\ \(1\).png);
-    }
+    } */
 
     .header-text {
         margin-top: 30%;
