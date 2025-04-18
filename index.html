@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pesonal Folio</title>
+    <title>Personal Folio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/3f26566372.js" crossorigin="anonymous"></script>
 </head>
@@ -26,7 +26,7 @@
             </nav>
             <div class="header-text">
                 <p>FULLSTACK DEVELOPER</p>
-                <H1>Hi, I'm Abu <br><span>Ubaid</span> From India</H1>
+                <h1>Hi, I'm Abu <br><span>Ubaid</span> from India</h1>
             </div>
         </div>
     </div>
@@ -35,7 +35,7 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/WhatsApp Image 2024-06-22 at 10.30.48 AM.jpeg">
+                    <img src="images/WhatsApp Image 2024-06-22 at 10.30.48 AM.jpeg" alt="Abu Ubaid profile photo">
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
@@ -225,7 +225,7 @@
                         <a href="https://github.com/AabuUbaid"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/aabu-ubaid/"><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="images/Abu Ubaid.pdf" download class=" btn btn2">Download Resume</a>
+                    <a href="images/Abu_Ubaid_Resume.pdf" download class=" btn btn2">Download Resume</a>
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
@@ -273,8 +273,13 @@
         }
     </script>
 
+    <form name="submit-to-google-sheet">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Send</button>
+    </form>
+
     <script>
-        const scriptURL = 'https://docs.google.com/spreadsheets/d/1x5AA--2VAUt4gIwXBrGz0y2iVoRxEgFlNY6rMUVTIo0/edit?usp=sharing'
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbw1vGtP2Vpu1aNJV-1kJJCedleH8O7HFED6xbNSACU-UjVdOZXyXXtplIwcFV_L4alt-A/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
 
@@ -282,7 +287,7 @@
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    msg.innerHTML = "Message sumbitted successfully"
+                    msg.innerHTML = "Message sent successfully"
                     setTimeout(function () {
                         msg.innerHTML = ""
                     }, 5000)
